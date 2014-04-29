@@ -1,0 +1,52 @@
+.none {
+  display: none;
+}
+.util-border-radius-none {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+}
+.util-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-textHidden {
+  text-indent: 99999px;
+  overflow: hidden;
+}
+@media all and (max-width: 640px) {
+  .login-bg {
+    height: 400px;
+    margin: 0px;
+    pading: 0px;
+    background: url("images/login-bg.jpg") no-repeat center bottom;
+    background-size: cover;
+  }
+  .login-bg .bmg-logo {
+    min-height: 50px;
+    padding-top: 150px;
+    background: url("images/bmg-logo.png") no-repeat center 20px;
+    text-align: center;
+  }
+  .login-bg .bmg-logo h1 {
+    font-size: 16px;
+    color: #8b9bae;
+    font-family: "nanum gothic";
+    text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff, 0px 0px 5px #000000;
+  }
+  .login-bg .bmg-logo section {
+    font-size: 14px;
+    color: #525354;
+    font-family: "nanum gothic";
+  }
+  .login-bg .bmg-logo section u {
+    color: #8b97a2;
+  }
+  .login-bg .button-group {
+    padding: 20px;
+    width: 200px;
+    margin: 0px auto 0px auto;
+    text-align: center;
+  }
+}

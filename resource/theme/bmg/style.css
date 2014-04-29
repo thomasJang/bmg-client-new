@@ -1,0 +1,1776 @@
+.none {
+  display: none;
+}
+.util-border-radius-none {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+}
+.util-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-textHidden {
+  text-indent: 99999px;
+  overflow: hidden;
+}
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+html.game,
+body.game {
+  background: #e9eff4;
+}
+button i {
+  font-size: 15px;
+}
+.login-bg {
+  height: 700px;
+  margin: 0px;
+  pading: 0px;
+  background: url("images/login-bg.jpg") no-repeat center bottom;
+  background-size: cover;
+}
+.login-bg .bmg-logo {
+  min-height: 100px;
+  padding-top: 300px;
+  background: url("images/bmg-logo.png") no-repeat center 150px;
+  text-align: center;
+}
+.login-bg .bmg-logo h1 {
+  color: #8b9bae;
+  font-family: "nanum gothic";
+  text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff, 0px 0px 5px #000000;
+}
+.login-bg .bmg-logo section {
+  color: #525354;
+  font-family: "nanum gothic";
+}
+.login-bg .bmg-logo section u {
+  color: #8b97a2;
+}
+.login-bg .button-group {
+  padding: 20px;
+  width: 200px;
+  margin: 0px auto 0px auto;
+  text-align: center;
+}
+#pop-up {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -moz-opacity: 0;
+  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  z-index: 6000;
+  position: absolute;
+  left: 0px;
+  top: -400px;
+  width: 100%;
+}
+#pop-up.open {
+  -moz-opacity: 1;
+  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+  top: 100px;
+}
+#pop-up .pop-up-box {
+  background: #f5f5f5;
+  margin: 10px auto;
+  width: 300px;
+  box-shadow: 0px 0px 5px #ccc;
+  border-radius: 3px;
+}
+#pop-up .pop-up-box .article h1 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 12px;
+  color: #a3b1be;
+  line-height: 28px;
+  padding-top: 4px;
+  text-align: center;
+}
+#pop-up .pop-up-box .article .section {
+  padding: 0px 10px 10px 10px;
+  text-align: center;
+}
+#pop-up .pop-up-box .article.form .section {
+  display: none;
+  padding: 10px 20px 20px 20px;
+}
+#pop-up .pop-up-box .article.form .section.on {
+  display: block;
+}
+#pop-up .pop-up-box .article.form .hgroup {
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  height: 40px;
+  position: relative;
+}
+#pop-up .pop-up-box .article.form .hgroup h1 {
+  float: left;
+  display: block;
+  width: 50%;
+  height: 40px;
+  padding: 0px;
+  margin: 0px;
+  background: #a3b1be;
+  font-size: 12px;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+#pop-up .pop-up-box .article.form .hgroup h1.left {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 0px;
+}
+#pop-up .pop-up-box .article.form .hgroup h1.right {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 3px;
+}
+#pop-up .pop-up-box .article.form .hgroup h1.on {
+  background: #f5f5f5;
+  color: #000;
+}
+#pop-up .pop-up-box .article.form .hgroup #pop-up-close {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("images/login-close.png") no-repeat center center;
+}
+#pop-up .pop-up-box .article.form input[type=text],
+#pop-up .pop-up-box .article.form input[type=password] {
+  margin: 0px 0px 5px 0px;
+}
+#pop-up .pop-up-box .article.form button {
+  margin-top: 5px;
+}
+#ax-page-head {
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  background: #5e6c79;
+  z-index: 1000;
+  box-shadow: 0px 0px 3px #444;
+}
+#ax-page-head .game-title {
+  display: inline-block;
+  height: 38px;
+  line-height: 40px;
+  padding: 0px 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  vertical-align: middle;
+}
+#ax-page-head .head-tools {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 38px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 11px;
+  padding: 0px 10px;
+}
+#ax-page-head .head-tools .download {
+  display: inline-block;
+  height: 24px;
+  vertical-align: middle;
+  background: url(images/icons-1x/download.png) no-repeat;
+  background-size: 24px;
+  padding-left: 30px;
+  line-height: 24px;
+}
+#ax-page-head .head-tools .user-icon {
+  margin-left: 5px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  border: 1px solid #84909b;
+}
+#ax-page-head .head-tools a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 11px;
+  text-decoration: none;
+  padding: 0px 5px;
+}
+#ax-page-body {
+  padding: 40px 25% 0px 0px;
+  text-align: center;
+  background: #e9eff4;
+  /* navigation */
+
+}
+#ax-page-body .game-stages .stages {
+  padding-left: 20px;
+  background: #fff;
+}
+#ax-page-body .game-stages .stages.gray {
+  background: #e9eff4;
+}
+#ax-page-body .game-stages .stages .stage-title {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  color: #5e6c79;
+  font-weight: bold;
+  text-align: center;
+  clear: both;
+  padding: 0px 20px;
+  border: 2px solid #5e6c79;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  margin: 40px 0px 20px 0px;
+}
+#ax-page-body .game-stages .stages .stage-end {
+  clear: both;
+  height: 32px;
+  border-bottom: 1px solid #dfe8ee;
+}
+#ax-page-body .game-stages .stages .item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  margin-top: 10px;
+  background: #5e6c79;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  padding: 8px;
+  width: 254px;
+  text-align: center;
+}
+#ax-page-body .game-stages .stages .item .item-questions {
+  background: #8a97a2;
+  margin-bottom: 10px;
+  font-size: 11px;
+  color: #e3eaef;
+  text-align: left;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  height: 100px;
+}
+#ax-page-body .game-stages .stages .item .item-questions.link {
+  margin-bottom: 0px;
+  height: 256px;
+  padding: 10px;
+}
+#ax-page-body .game-stages .stages .item .item-questions ul,
+#ax-page-body .game-stages .stages .item .item-questions li {
+  margin: 0px;
+  padding: 0px;
+}
+#ax-page-body .game-stages .stages .item .item-questions ul {
+  padding: 10px 10px 10px 25px;
+}
+#ax-page-body .game-stages .stages .item .item-questions li {
+  margin-bottom: 5px;
+}
+#ax-page-body .game-stages .stages .item .item-questions li:nth-child(even) {
+  color: #fff;
+}
+#ax-page-body .game-stages .stages .item .item-value {
+  border: 1px solid #818e98;
+  box-shadow: inset 0px 1px 3px #888;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  background: #fff;
+  padding: 4px 4px 0px 4px;
+}
+#ax-page-body .game-stages .stages .item .item-value TEXTAREA {
+  border: 0px none;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 150px;
+  line-height: 26px;
+  background: url(images/textareaBg.png);
+  overflow: auto;
+}
+#ax-page-body .game-stages .stages .item .item-help {
+  position: absolute;
+  right: 28px;
+  top: 7px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  /*background:url(images/icons-1x/help.png) no-repeat;
+          background-size:16px;
+          */
+
+}
+#ax-page-body .game-stages .stages .item .item-quick {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  /*
+          background:url(images/icons-1x/quick.png) no-repeat;
+          background-size:16px;
+          */
+
+}
+#ax-page-body .game-stages .stages .item .item-code {
+  display: block;
+  height: 60px;
+  margin: 10px auto 0px auto;
+}
+#ax-page-body .game-stages .stages .item .item-name {
+  display: inline-block;
+  height: 34px;
+  line-height: 20px;
+  color: #fff;
+  font-weight: bold;
+  padding: 7px 20px 7px 0px;
+}
+#ax-page-body .game-stages .stages .item.seq01 .item-code {
+  background: url(images/icons-1x/icb01.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq01 .item-name {
+  background: url(images/icons-1x/icn01.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq02 .item-code {
+  background: url(images/icons-1x/icb02.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq02 .item-name {
+  background: url(images/icons-1x/icn02.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq03 {
+  background: #80cac5;
+}
+#ax-page-body .game-stages .stages .item.seq03 .item-questions {
+  background: #4f8e99;
+}
+#ax-page-body .game-stages .stages .item.seq03 .item-code {
+  background: url(images/icons-1x/icb03.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq03 .item-name {
+  background: url(images/icons-1x/icn03.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq04 {
+  background: #e75f64;
+}
+#ax-page-body .game-stages .stages .item.seq04 .item-questions {
+  background: #c45055;
+}
+#ax-page-body .game-stages .stages .item.seq04 .item-code {
+  background: url(images/icons-1x/icb04.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq04 .item-name {
+  background: url(images/icons-1x/icn04.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq05 {
+  background: #e75f64;
+}
+#ax-page-body .game-stages .stages .item.seq05 .item-questions {
+  background: #c45055;
+}
+#ax-page-body .game-stages .stages .item.seq05 .item-code {
+  background: url(images/icons-1x/icb05.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq05 .item-name {
+  background: url(images/icons-1x/icn05.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq06 {
+  background: #e75f64;
+}
+#ax-page-body .game-stages .stages .item.seq06 .item-questions {
+  background: #c45055;
+}
+#ax-page-body .game-stages .stages .item.seq06 .item-code {
+  background: url(images/icons-1x/icb06.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq06 .item-name {
+  background: url(images/icons-1x/icn06.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq07 {
+  background: #88ab5b;
+}
+#ax-page-body .game-stages .stages .item.seq07 .item-questions {
+  background: #74904c;
+}
+#ax-page-body .game-stages .stages .item.seq07 .item-code {
+  background: url(images/icons-1x/icb07.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq07 .item-name {
+  background: url(images/icons-1x/icn07.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq08 {
+  background: #88ab5b;
+}
+#ax-page-body .game-stages .stages .item.seq08 .item-questions {
+  background: #74904c;
+}
+#ax-page-body .game-stages .stages .item.seq08 .item-code {
+  background: url(images/icons-1x/icb08.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq08 .item-name {
+  background: url(images/icons-1x/icn08.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq09 {
+  background: #88ab5b;
+}
+#ax-page-body .game-stages .stages .item.seq09 .item-questions {
+  background: #74904c;
+}
+#ax-page-body .game-stages .stages .item.seq09 .item-code {
+  background: url(images/icons-1x/icb09.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq09 .item-name {
+  background: url(images/icons-1x/icn09.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq10 {
+  background: #88ab5b;
+}
+#ax-page-body .game-stages .stages .item.seq10 .item-questions {
+  background: #74904c;
+}
+#ax-page-body .game-stages .stages .item.seq10 .item-code {
+  background: url(images/icons-1x/icb10.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq10 .item-name {
+  background: url(images/icons-1x/icn10.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq11 {
+  background: #88ab5b;
+}
+#ax-page-body .game-stages .stages .item.seq11 .item-questions {
+  background: #74904c;
+}
+#ax-page-body .game-stages .stages .item.seq11 .item-code {
+  background: url(images/icons-1x/icb11.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq11 .item-name {
+  background: url(images/icons-1x/icn11.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq12 {
+  background: #88ab5b;
+}
+#ax-page-body .game-stages .stages .item.seq12 .item-questions {
+  background: #74904c;
+}
+#ax-page-body .game-stages .stages .item.seq12 .item-code {
+  background: url(images/icons-1x/icb12.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq12 .item-name {
+  background: url(images/icons-1x/icn12.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq13 {
+  background: #e75f64;
+}
+#ax-page-body .game-stages .stages .item.seq13 .item-questions {
+  background: #c45055;
+}
+#ax-page-body .game-stages .stages .item.seq13 .item-code {
+  background: url(images/icons-1x/icb13.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq13 .item-name {
+  background: url(images/icons-1x/icn13.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq14 {
+  background: #e75f64;
+}
+#ax-page-body .game-stages .stages .item.seq14 .item-questions {
+  background: #c45055;
+}
+#ax-page-body .game-stages .stages .item.seq14 .item-code {
+  background: url(images/icons-1x/icb14.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq14 .item-name {
+  background: url(images/icons-1x/icn14.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq15 {
+  background: #e75f64;
+}
+#ax-page-body .game-stages .stages .item.seq15 .item-questions {
+  background: #c45055;
+}
+#ax-page-body .game-stages .stages .item.seq15 .item-code {
+  background: url(images/icons-1x/icb15.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq15 .item-name {
+  background: url(images/icons-1x/icn15.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq16 {
+  background: #68c5db;
+}
+#ax-page-body .game-stages .stages .item.seq16 .item-questions {
+  background: #59a8bb;
+}
+#ax-page-body .game-stages .stages .item.seq16 .item-code {
+  background: url(images/icons-1x/icb16.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq16 .item-name {
+  background: url(images/icons-1x/icn16.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq17 {
+  background: #68c5db;
+}
+#ax-page-body .game-stages .stages .item.seq17 .item-questions {
+  background: #59a8bb;
+}
+#ax-page-body .game-stages .stages .item.seq17 .item-code {
+  background: url(images/icons-1x/icb17.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq17 .item-name {
+  background: url(images/icons-1x/icn17.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq18 {
+  background: #68c5db;
+}
+#ax-page-body .game-stages .stages .item.seq18 .item-questions {
+  background: #59a8bb;
+}
+#ax-page-body .game-stages .stages .item.seq18 .item-code {
+  background: url(images/icons-1x/icb18.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq18 .item-name {
+  background: url(images/icons-1x/icn18.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq19 {
+  background: #68c5db;
+}
+#ax-page-body .game-stages .stages .item.seq19 .item-questions {
+  background: #59a8bb;
+}
+#ax-page-body .game-stages .stages .item.seq19 .item-code {
+  background: url(images/icons-1x/icb19.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq19 .item-name {
+  background: url(images/icons-1x/icn19.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .game-stages .stages .item.seq20 {
+  background: #68c5db;
+}
+#ax-page-body .game-stages .stages .item.seq20 .item-questions {
+  background: #59a8bb;
+}
+#ax-page-body .game-stages .stages .item.seq20 .item-code {
+  background: url(images/icons-1x/icb20.png) no-repeat center center;
+  background-size: 60px;
+}
+#ax-page-body .game-stages .stages .item.seq20 .item-name {
+  background: url(images/icons-1x/icn20.png) no-repeat 100% 10px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 23%;
+  height: 100%;
+  padding: 0px 1%;
+  background: #d0dce5;
+}
+#ax-page-body .quick-container .quick-title {
+  padding-top: 50px;
+  font-family: Tahoma;
+  font-size: 14px;
+  color: #b7c5d1;
+  font-weight: bold;
+  text-shadow: 0px 1px 0px #fff;
+}
+#ax-page-body .quick-container .quick-body {
+  min-height: 200px;
+  width: 100%;
+}
+#ax-page-body .quick-container .quick-body .item {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #a1b1be;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  padding: 8px;
+  text-align: center;
+}
+#ax-page-body .quick-container .quick-body .item .item-name {
+  display: block;
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  padding: 0px 0px 5px 20px;
+  text-align: left;
+}
+#ax-page-body .quick-container .quick-body .item.seq01 .item-name {
+  background: url(images/icons-1x/icn01.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq02 .item-name {
+  background: url(images/icons-1x/icn02.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq03 .item-name {
+  background: url(images/icons-1x/icn03.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq04 .item-name {
+  background: url(images/icons-1x/icn04.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq05 .item-name {
+  background: url(images/icons-1x/icn05.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq06 .item-name {
+  background: url(images/icons-1x/icn06.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq07 .item-name {
+  background: url(images/icons-1x/icn07.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq08 .item-name {
+  background: url(images/icons-1x/icn08.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq09 .item-name {
+  background: url(images/icons-1x/icn09.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq10 .item-name {
+  background: url(images/icons-1x/icn10.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq11 .item-name {
+  background: url(images/icons-1x/icn11.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq12 .item-name {
+  background: url(images/icons-1x/icn12.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq13 .item-name {
+  background: url(images/icons-1x/icn13.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq14 .item-name {
+  background: url(images/icons-1x/icn14.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq15 .item-name {
+  background: url(images/icons-1x/icn15.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq16 .item-name {
+  background: url(images/icons-1x/icn16.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq17 .item-name {
+  background: url(images/icons-1x/icn17.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq18 .item-name {
+  background: url(images/icons-1x/icn18.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq19 .item-name {
+  background: url(images/icons-1x/icn19.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq20 .item-name {
+  background: url(images/icons-1x/icn20.png) no-repeat 0px 0px;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item .item-value {
+  border: 1px solid #818e98;
+  box-shadow: inset 0px 1px 3px #888;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  background: #fff;
+  padding: 4px 4px 0px 4px;
+}
+#ax-page-body .quick-container .quick-body .item .item-value TEXTAREA {
+  border: 0px none;
+  padding: 0px;
+  width: 100%;
+  height: 100px;
+  line-height: 26px;
+  background: url(images/textareaBg.png);
+  overflow: auto;
+}
+#ax-page-body .quick-container .quick-body .item .item-quick {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(images/icons-1x/removeQuick.png) no-repeat;
+  background-size: 16px;
+}
+#ax-page-body .quick-container .quick-body .item.seq03 {
+  background: #88ab5b;
+}
+#ax-page-body .quick-container .quick-body .item.seq03 .item-questions {
+  background: #74904c;
+}
+#ax-page-body .quick-container .quick-body .item.seq04 {
+  background: #e75f64;
+}
+#ax-page-body .quick-container .quick-body .item.seq04 .item-questions {
+  background: #c45055;
+}
+#ax-page-body .quick-container .quick-body .item.seq05 {
+  background: #e75f64;
+}
+#ax-page-body .quick-container .quick-body .item.seq05 .item-questions {
+  background: #c45055;
+}
+#ax-page-body .quick-container .quick-body .item.seq06 {
+  background: #e75f64;
+}
+#ax-page-body .quick-container .quick-body .item.seq06 .item-questions {
+  background: #c45055;
+}
+#ax-page-body .quick-container .quick-body .item.seq07 {
+  background: #88ab5b;
+}
+#ax-page-body .quick-container .quick-body .item.seq07 .item-questions {
+  background: #74904c;
+}
+#ax-page-body .quick-container .quick-body .item.seq08 {
+  background: #88ab5b;
+}
+#ax-page-body .quick-container .quick-body .item.seq08 .item-questions {
+  background: #74904c;
+}
+#ax-page-body .quick-container .quick-body .item.seq09 {
+  background: #88ab5b;
+}
+#ax-page-body .quick-container .quick-body .item.seq09 .item-questions {
+  background: #74904c;
+}
+#ax-page-body .quick-container .quick-body .item.seq10 {
+  background: #88ab5b;
+}
+#ax-page-body .quick-container .quick-body .item.seq10 .item-questions {
+  background: #74904c;
+}
+#ax-page-body .quick-container .quick-body .item.seq11 {
+  background: #88ab5b;
+}
+#ax-page-body .quick-container .quick-body .item.seq11 .item-questions {
+  background: #74904c;
+}
+#ax-page-body .quick-container .quick-body .item.seq12 {
+  background: #88ab5b;
+}
+#ax-page-body .quick-container .quick-body .item.seq12 .item-questions {
+  background: #74904c;
+}
+#ax-page-body .quick-container .quick-body .item.seq13 {
+  background: #e75f64;
+}
+#ax-page-body .quick-container .quick-body .item.seq13 .item-questions {
+  background: #c45055;
+}
+#ax-page-body .quick-container .quick-body .item.seq14 {
+  background: #e75f64;
+}
+#ax-page-body .quick-container .quick-body .item.seq14 .item-questions {
+  background: #c45055;
+}
+#ax-page-body .quick-container .quick-body .item.seq15 {
+  background: #e75f64;
+}
+#ax-page-body .quick-container .quick-body .item.seq15 .item-questions {
+  background: #c45055;
+}
+#ax-page-body .quick-container .quick-body .item.seq16 {
+  background: #68c5db;
+}
+#ax-page-body .quick-container .quick-body .item.seq16 .item-questions {
+  background: #59a8bb;
+}
+#ax-page-body .quick-container .quick-body .item.seq17 {
+  background: #68c5db;
+}
+#ax-page-body .quick-container .quick-body .item.seq17 .item-questions {
+  background: #59a8bb;
+}
+#ax-page-body .quick-container .quick-body .item.seq18 {
+  background: #68c5db;
+}
+#ax-page-body .quick-container .quick-body .item.seq18 .item-questions {
+  background: #59a8bb;
+}
+#ax-page-body .quick-container .quick-body .item.seq19 {
+  background: #68c5db;
+}
+#ax-page-body .quick-container .quick-body .item.seq19 .item-questions {
+  background: #59a8bb;
+}
+#ax-page-body .quick-container .quick-body .item.seq20 {
+  background: #68c5db;
+}
+#ax-page-body .quick-container .quick-body .item.seq20 .item-questions {
+  background: #59a8bb;
+}
+#ax-page-body .quick-container .quick-foot {
+  border-top: 1px solid #fff;
+  background: url(images/sponser.png) no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 90px;
+}
+#ax-page-body .navigation {
+  position: fixed;
+  left: 0px;
+  top: 60px;
+  width: 30px;
+  padding-left: 4px;
+}
+#ax-page-body .navigation .stageMenu {
+  display: block;
+  height: 26px;
+  width: 26px;
+  text-align: center;
+}
+#ax-page-body .navigation .stageMenu.stage1 {
+  background: url(images/icons-1x/ics01.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation.stage1 .stageMenu.stage1 {
+  background: url(images/icons-1x/ics01r.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation .stageMenu.stage2 {
+  background: url(images/icons-1x/ics02.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation.stage2 .stageMenu.stage2 {
+  background: url(images/icons-1x/ics02r.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation .stageMenu.stage3 {
+  background: url(images/icons-1x/ics03.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation.stage3 .stageMenu.stage3 {
+  background: url(images/icons-1x/ics03r.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation .stageMenu.stage4 {
+  background: url(images/icons-1x/ics04.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation.stage4 .stageMenu.stage4 {
+  background: url(images/icons-1x/ics04r.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation .stageMenu.stage5 {
+  background: url(images/icons-1x/ics05.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation.stage5 .stageMenu.stage5 {
+  background: url(images/icons-1x/ics05r.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation .stageMenu.stage6 {
+  background: url(images/icons-1x/ics06.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation.stage6 .stageMenu.stage6 {
+  background: url(images/icons-1x/ics06r.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation .stageMenu.stage7 {
+  background: url(images/icons-1x/ics07.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation.stage7 .stageMenu.stage7 {
+  background: url(images/icons-1x/ics07r.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation .stageMenu.stage8 {
+  background: url(images/icons-1x/ics08.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation.stage8 .stageMenu.stage8 {
+  background: url(images/icons-1x/ics08r.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation .stageMenu.stage9 {
+  background: url(images/icons-1x/ics09.png) no-repeat center center;
+  background-size: 26px;
+}
+#ax-page-body .navigation.stage9 .stageMenu.stage9 {
+  background: url(images/icons-1x/ics09r.png) no-repeat center center;
+  background-size: 26px;
+}
+.none {
+  display: none;
+}
+.util-border-radius-none {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+}
+.util-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.util-textHidden {
+  text-indent: 99999px;
+  overflow: hidden;
+}
+@media all and (max-width: 640px) {
+  .login-bg {
+    height: 400px;
+    margin: 0px;
+    pading: 0px;
+    background: url("images/login-bg.jpg") no-repeat center bottom;
+    background-size: cover;
+  }
+  .login-bg .bmg-logo {
+    min-height: 50px;
+    padding-top: 150px;
+    background: url("images/bmg-logo.png") no-repeat center 20px;
+    text-align: center;
+  }
+  .login-bg .bmg-logo h1 {
+    font-size: 16px;
+    color: #8b9bae;
+    font-family: "nanum gothic";
+    text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff, 0px 0px 5px #000000;
+  }
+  .login-bg .bmg-logo section {
+    font-size: 14px;
+    color: #525354;
+    font-family: "nanum gothic";
+  }
+  .login-bg .bmg-logo section u {
+    color: #8b97a2;
+  }
+  .login-bg .button-group {
+    padding: 20px;
+    width: 200px;
+    margin: 0px auto 0px auto;
+    text-align: center;
+  }
+  #ax-page-body {
+    padding: 40px 25% 0px 0px;
+    text-align: center;
+    background: #e9eff4;
+    /* navigation */
+  
+  }
+  #ax-page-body .game-stages .stages {
+    padding-left: 20px;
+    background: #fff;
+  }
+  #ax-page-body .game-stages .stages.gray {
+    background: #e9eff4;
+  }
+  #ax-page-body .game-stages .stages .stage-title {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #5e6c79;
+    font-weight: bold;
+    text-align: center;
+    clear: both;
+    padding: 0px 20px;
+    border: 2px solid #5e6c79;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+    margin: 40px 0px 20px 0px;
+  }
+  #ax-page-body .game-stages .stages .stage-end {
+    clear: both;
+    height: 32px;
+    border-bottom: 1px solid #dfe8ee;
+  }
+  #ax-page-body .game-stages .stages .item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    margin-top: 10px;
+    background: #5e6c79;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+    padding: 8px;
+    width: 254px;
+    text-align: center;
+  }
+  #ax-page-body .game-stages .stages .item .item-questions {
+    background: #8a97a2;
+    margin-bottom: 10px;
+    font-size: 11px;
+    color: #e3eaef;
+    text-align: left;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    height: 100px;
+  }
+  #ax-page-body .game-stages .stages .item .item-questions.link {
+    margin-bottom: 0px;
+    height: 256px;
+    padding: 10px;
+  }
+  #ax-page-body .game-stages .stages .item .item-questions ul,
+  #ax-page-body .game-stages .stages .item .item-questions li {
+    margin: 0px;
+    padding: 0px;
+  }
+  #ax-page-body .game-stages .stages .item .item-questions ul {
+    padding: 10px 10px 10px 25px;
+  }
+  #ax-page-body .game-stages .stages .item .item-questions li {
+    margin-bottom: 5px;
+  }
+  #ax-page-body .game-stages .stages .item .item-questions li:nth-child(even) {
+    color: #fff;
+  }
+  #ax-page-body .game-stages .stages .item .item-value {
+    border: 1px solid #818e98;
+    box-shadow: inset 0px 1px 3px #888;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    background: #fff;
+    padding: 4px 4px 0px 4px;
+  }
+  #ax-page-body .game-stages .stages .item .item-value TEXTAREA {
+    border: 0px none;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 150px;
+    line-height: 26px;
+    background: url(images/textareaBg.png);
+    overflow: auto;
+  }
+  #ax-page-body .game-stages .stages .item .item-help {
+    position: absolute;
+    right: 28px;
+    top: 7px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    /*background:url(images/icons/help.png) no-repeat;
+              background-size:16px;
+              */
+  
+  }
+  #ax-page-body .game-stages .stages .item .item-quick {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    /*
+              background:url(images/icons/quick.png) no-repeat;
+              background-size:16px;
+              */
+  
+  }
+  #ax-page-body .game-stages .stages .item .item-code {
+    display: block;
+    height: 60px;
+    margin: 10px auto 0px auto;
+  }
+  #ax-page-body .game-stages .stages .item .item-name {
+    display: inline-block;
+    height: 34px;
+    line-height: 20px;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px 20px 7px 0px;
+  }
+  #ax-page-body .game-stages .stages .item.seq01 .item-code {
+    background: url(images/icons/icb01.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq01 .item-name {
+    background: url(images/icons/icn01.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq02 .item-code {
+    background: url(images/icons/icb02.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq02 .item-name {
+    background: url(images/icons/icn02.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq03 {
+    background: #80cac5;
+  }
+  #ax-page-body .game-stages .stages .item.seq03 .item-questions {
+    background: #4f8e99;
+  }
+  #ax-page-body .game-stages .stages .item.seq03 .item-code {
+    background: url(images/icons/icb03.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq03 .item-name {
+    background: url(images/icons/icn03.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq04 {
+    background: #e75f64;
+  }
+  #ax-page-body .game-stages .stages .item.seq04 .item-questions {
+    background: #c45055;
+  }
+  #ax-page-body .game-stages .stages .item.seq04 .item-code {
+    background: url(images/icons/icb04.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq04 .item-name {
+    background: url(images/icons/icn04.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq05 {
+    background: #e75f64;
+  }
+  #ax-page-body .game-stages .stages .item.seq05 .item-questions {
+    background: #c45055;
+  }
+  #ax-page-body .game-stages .stages .item.seq05 .item-code {
+    background: url(images/icons/icb05.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq05 .item-name {
+    background: url(images/icons/icn05.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq06 {
+    background: #e75f64;
+  }
+  #ax-page-body .game-stages .stages .item.seq06 .item-questions {
+    background: #c45055;
+  }
+  #ax-page-body .game-stages .stages .item.seq06 .item-code {
+    background: url(images/icons/icb06.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq06 .item-name {
+    background: url(images/icons/icn06.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq07 {
+    background: #88ab5b;
+  }
+  #ax-page-body .game-stages .stages .item.seq07 .item-questions {
+    background: #74904c;
+  }
+  #ax-page-body .game-stages .stages .item.seq07 .item-code {
+    background: url(images/icons/icb07.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq07 .item-name {
+    background: url(images/icons/icn07.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq08 {
+    background: #88ab5b;
+  }
+  #ax-page-body .game-stages .stages .item.seq08 .item-questions {
+    background: #74904c;
+  }
+  #ax-page-body .game-stages .stages .item.seq08 .item-code {
+    background: url(images/icons/icb08.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq08 .item-name {
+    background: url(images/icons/icn08.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq09 {
+    background: #88ab5b;
+  }
+  #ax-page-body .game-stages .stages .item.seq09 .item-questions {
+    background: #74904c;
+  }
+  #ax-page-body .game-stages .stages .item.seq09 .item-code {
+    background: url(images/icons/icb09.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq09 .item-name {
+    background: url(images/icons/icn09.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq10 {
+    background: #88ab5b;
+  }
+  #ax-page-body .game-stages .stages .item.seq10 .item-questions {
+    background: #74904c;
+  }
+  #ax-page-body .game-stages .stages .item.seq10 .item-code {
+    background: url(images/icons/icb10.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq10 .item-name {
+    background: url(images/icons/icn10.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq11 {
+    background: #88ab5b;
+  }
+  #ax-page-body .game-stages .stages .item.seq11 .item-questions {
+    background: #74904c;
+  }
+  #ax-page-body .game-stages .stages .item.seq11 .item-code {
+    background: url(images/icons/icb11.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq11 .item-name {
+    background: url(images/icons/icn11.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq12 {
+    background: #88ab5b;
+  }
+  #ax-page-body .game-stages .stages .item.seq12 .item-questions {
+    background: #74904c;
+  }
+  #ax-page-body .game-stages .stages .item.seq12 .item-code {
+    background: url(images/icons/icb12.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq12 .item-name {
+    background: url(images/icons/icn12.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq13 {
+    background: #e75f64;
+  }
+  #ax-page-body .game-stages .stages .item.seq13 .item-questions {
+    background: #c45055;
+  }
+  #ax-page-body .game-stages .stages .item.seq13 .item-code {
+    background: url(images/icons/icb13.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq13 .item-name {
+    background: url(images/icons/icn13.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq14 {
+    background: #e75f64;
+  }
+  #ax-page-body .game-stages .stages .item.seq14 .item-questions {
+    background: #c45055;
+  }
+  #ax-page-body .game-stages .stages .item.seq14 .item-code {
+    background: url(images/icons/icb14.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq14 .item-name {
+    background: url(images/icons/icn14.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq15 {
+    background: #e75f64;
+  }
+  #ax-page-body .game-stages .stages .item.seq15 .item-questions {
+    background: #c45055;
+  }
+  #ax-page-body .game-stages .stages .item.seq15 .item-code {
+    background: url(images/icons/icb15.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq15 .item-name {
+    background: url(images/icons/icn15.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq16 {
+    background: #68c5db;
+  }
+  #ax-page-body .game-stages .stages .item.seq16 .item-questions {
+    background: #59a8bb;
+  }
+  #ax-page-body .game-stages .stages .item.seq16 .item-code {
+    background: url(images/icons/icb16.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq16 .item-name {
+    background: url(images/icons/icn16.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq17 {
+    background: #68c5db;
+  }
+  #ax-page-body .game-stages .stages .item.seq17 .item-questions {
+    background: #59a8bb;
+  }
+  #ax-page-body .game-stages .stages .item.seq17 .item-code {
+    background: url(images/icons/icb17.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq17 .item-name {
+    background: url(images/icons/icn17.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq18 {
+    background: #68c5db;
+  }
+  #ax-page-body .game-stages .stages .item.seq18 .item-questions {
+    background: #59a8bb;
+  }
+  #ax-page-body .game-stages .stages .item.seq18 .item-code {
+    background: url(images/icons/icb18.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq18 .item-name {
+    background: url(images/icons/icn18.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq19 {
+    background: #68c5db;
+  }
+  #ax-page-body .game-stages .stages .item.seq19 .item-questions {
+    background: #59a8bb;
+  }
+  #ax-page-body .game-stages .stages .item.seq19 .item-code {
+    background: url(images/icons/icb19.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq19 .item-name {
+    background: url(images/icons/icn19.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .game-stages .stages .item.seq20 {
+    background: #68c5db;
+  }
+  #ax-page-body .game-stages .stages .item.seq20 .item-questions {
+    background: #59a8bb;
+  }
+  #ax-page-body .game-stages .stages .item.seq20 .item-code {
+    background: url(images/icons/icb20.png) no-repeat center center;
+    background-size: 60px;
+  }
+  #ax-page-body .game-stages .stages .item.seq20 .item-name {
+    background: url(images/icons/icn20.png) no-repeat 100% 10px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 23%;
+    height: 100%;
+    padding: 0px 1%;
+    background: #d0dce5;
+  }
+  #ax-page-body .quick-container .quick-title {
+    padding-top: 50px;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: #b7c5d1;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #fff;
+  }
+  #ax-page-body .quick-container .quick-body {
+    min-height: 200px;
+    width: 100%;
+  }
+  #ax-page-body .quick-container .quick-body .item {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #a1b1be;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+    padding: 8px;
+    text-align: center;
+  }
+  #ax-page-body .quick-container .quick-body .item .item-name {
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    padding: 0px 0px 5px 20px;
+    text-align: left;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq01 .item-name {
+    background: url(images/icons/icn01.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq02 .item-name {
+    background: url(images/icons/icn02.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq03 .item-name {
+    background: url(images/icons/icn03.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq04 .item-name {
+    background: url(images/icons/icn04.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq05 .item-name {
+    background: url(images/icons/icn05.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq06 .item-name {
+    background: url(images/icons/icn06.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq07 .item-name {
+    background: url(images/icons/icn07.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq08 .item-name {
+    background: url(images/icons/icn08.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq09 .item-name {
+    background: url(images/icons/icn09.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq10 .item-name {
+    background: url(images/icons/icn10.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq11 .item-name {
+    background: url(images/icons/icn11.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq12 .item-name {
+    background: url(images/icons/icn12.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq13 .item-name {
+    background: url(images/icons/icn13.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq14 .item-name {
+    background: url(images/icons/icn14.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq15 .item-name {
+    background: url(images/icons/icn15.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq16 .item-name {
+    background: url(images/icons/icn16.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq17 .item-name {
+    background: url(images/icons/icn17.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq18 .item-name {
+    background: url(images/icons/icn18.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq19 .item-name {
+    background: url(images/icons/icn19.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq20 .item-name {
+    background: url(images/icons/icn20.png) no-repeat 0px 0px;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item .item-value {
+    border: 1px solid #818e98;
+    box-shadow: inset 0px 1px 3px #888;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    background: #fff;
+    padding: 4px 4px 0px 4px;
+  }
+  #ax-page-body .quick-container .quick-body .item .item-value TEXTAREA {
+    border: 0px none;
+    padding: 0px;
+    width: 100%;
+    height: 100px;
+    line-height: 26px;
+    background: url(images/textareaBg.png);
+    overflow: auto;
+  }
+  #ax-page-body .quick-container .quick-body .item .item-quick {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(images/icons/removeQuick.png) no-repeat;
+    background-size: 16px;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq03 {
+    background: #88ab5b;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq03 .item-questions {
+    background: #74904c;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq04 {
+    background: #e75f64;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq04 .item-questions {
+    background: #c45055;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq05 {
+    background: #e75f64;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq05 .item-questions {
+    background: #c45055;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq06 {
+    background: #e75f64;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq06 .item-questions {
+    background: #c45055;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq07 {
+    background: #88ab5b;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq07 .item-questions {
+    background: #74904c;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq08 {
+    background: #88ab5b;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq08 .item-questions {
+    background: #74904c;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq09 {
+    background: #88ab5b;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq09 .item-questions {
+    background: #74904c;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq10 {
+    background: #88ab5b;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq10 .item-questions {
+    background: #74904c;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq11 {
+    background: #88ab5b;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq11 .item-questions {
+    background: #74904c;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq12 {
+    background: #88ab5b;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq12 .item-questions {
+    background: #74904c;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq13 {
+    background: #e75f64;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq13 .item-questions {
+    background: #c45055;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq14 {
+    background: #e75f64;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq14 .item-questions {
+    background: #c45055;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq15 {
+    background: #e75f64;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq15 .item-questions {
+    background: #c45055;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq16 {
+    background: #68c5db;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq16 .item-questions {
+    background: #59a8bb;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq17 {
+    background: #68c5db;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq17 .item-questions {
+    background: #59a8bb;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq18 {
+    background: #68c5db;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq18 .item-questions {
+    background: #59a8bb;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq19 {
+    background: #68c5db;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq19 .item-questions {
+    background: #59a8bb;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq20 {
+    background: #68c5db;
+  }
+  #ax-page-body .quick-container .quick-body .item.seq20 .item-questions {
+    background: #59a8bb;
+  }
+  #ax-page-body .quick-container .quick-foot {
+    border-top: 1px solid #fff;
+    background: url(images/sponser.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 90px;
+  }
+  #ax-page-body .navigation {
+    position: fixed;
+    left: 0px;
+    top: 60px;
+    width: 30px;
+    padding-left: 4px;
+  }
+  #ax-page-body .navigation .stageMenu {
+    display: block;
+    height: 26px;
+    width: 26px;
+    text-align: center;
+  }
+  #ax-page-body .navigation .stageMenu.stage1 {
+    background: url(images/icons/ics01.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation.stage1 .stageMenu.stage1 {
+    background: url(images/icons/ics01r.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation .stageMenu.stage2 {
+    background: url(images/icons/ics02.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation.stage2 .stageMenu.stage2 {
+    background: url(images/icons/ics02r.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation .stageMenu.stage3 {
+    background: url(images/icons/ics03.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation.stage3 .stageMenu.stage3 {
+    background: url(images/icons/ics03r.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation .stageMenu.stage4 {
+    background: url(images/icons/ics04.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation.stage4 .stageMenu.stage4 {
+    background: url(images/icons/ics04r.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation .stageMenu.stage5 {
+    background: url(images/icons/ics05.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation.stage5 .stageMenu.stage5 {
+    background: url(images/icons/ics05r.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation .stageMenu.stage6 {
+    background: url(images/icons/ics06.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation.stage6 .stageMenu.stage6 {
+    background: url(images/icons/ics06r.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation .stageMenu.stage7 {
+    background: url(images/icons/ics07.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation.stage7 .stageMenu.stage7 {
+    background: url(images/icons/ics07r.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation .stageMenu.stage8 {
+    background: url(images/icons/ics08.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation.stage8 .stageMenu.stage8 {
+    background: url(images/icons/ics08r.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation .stageMenu.stage9 {
+    background: url(images/icons/ics09.png) no-repeat center center;
+    background-size: 26px;
+  }
+  #ax-page-body .navigation.stage9 .stageMenu.stage9 {
+    background: url(images/icons/ics09r.png) no-repeat center center;
+    background-size: 26px;
+  }
+}

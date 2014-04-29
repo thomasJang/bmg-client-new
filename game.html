@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>비즈니스 모델 게임 - BMG</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1.0, minimum-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="axisj-black.ico" />
+
+    <meta property="og:image" content="http://dev.axisj.com/samples/_img/axisj_sns.png" />
+    <meta property="og:site_name" content="BMG" />
+    <meta property="og:description" id="meta_description" content="비즈니즈 모델의 기획, 분석, 검증 그리고 평가를 통해 비즈니스 모델을 실행하는 내부요인과 해당 비즈니스 모델에 영향을 끼치는 외부요인을 게임을 하듯이 스테이지 별로 클리어 해 나가는 '비즈니스 모델 게임(BMG)'입니다." />
+
+    <script type="text/javascript" src="axisj/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="axisj/lib/AXJ.js"></script>
+    <script type="text/javascript" src="axisj/lib/AXInput.js"></script>
+    <script type="text/javascript" src="axisj/lib/AXSelect.js"></script>
+    <script type="text/javascript" src="axisj/lib/AXTab.js"></script>
+    <script type="text/javascript" src="axisj/lib/AXProgress.js"></script>
+    <script type="text/javascript" src="axisj/lib/AXModal.js"></script>
+
+    <!-- css block -->
+    <link href="resource/font-awesome-4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="axisj/ui/bulldog/AXJ.css" />
+    <link rel="stylesheet" type="text/css" href="axisj/ui/bulldog/AXTabs.css" />
+    <link rel="stylesheet" type="text/css" href="axisj/ui/bulldog/AXInput.css" />
+    <link rel="stylesheet" type="text/css" href="axisj/ui/bulldog/AXSelect.css" />
+    <link rel="stylesheet" type="text/css" href="axisj/ui/bulldog/AXButton.css" />
+    <link rel="stylesheet" type="text/css" href="axisj/ui/bulldog/AXProgress.css" />
+
+    <link rel="stylesheet" type="text/css" href="resource/theme/bmg/style.css" />
+
+    <script type="text/javascript">
+        var user_id = AXUtil.getCookie("user_id");
+        var user_name = AXUtil.getCookie("user_name");
+        var user_token = AXUtil.getCookie("user_token");
+    </script>
+    <script type="text/javascript" src="resource/common.js?v=001"></script>
+    <script type="text/javascript" src="resource/game.js?v=001"></script>
+</head>
+<body class="game">
+
+    <div id="ax-page-head">
+        <span class="game-title" id="game-title">...</span>
+        <div class="head-tools">
+            <a href="http://api.bmg.name:9000/resources/bmg.pdf" target="_blank" class="download" id="download">BMG Case Example Kit</a>
+            |
+            <div class="user-icon" id="user-icon"></div>
+            <a href="javascript:;" class="user-name" id="user-name">...</a>
+            |
+            <a href="javascript:;" class="more" id="pop-menu-handle">More</a>
+        </div>
+    </div>
+    <!-- end ax-page-head -->
+
+    <div id="ax-page-body">
+        <!-- 게임 스테이지 정보 편집 -->
+        <div class="game-stages" id="game-stages">
+
+            <div id="stage1" class="stages gray">
+
+                <div class="stage-title">STAGE1</div>
+
+                <div class="stage-body">
+
+                    <div class="item seq01" id="item_BUSINESS_IDEA">
+                        <a href="#axexec" class="item-help" onclick=""><i class="fa fa-question-circle"></i></a>
+                        <a href="#axexec" class="item-quick" onclick=""><i class="fa fa-share-square-o"></i></a>
+                        <div class="item-code"><span class="none">BUSINESS_IDEA</span></div>
+                        <div class="item-name">비즈니스 아이디어</div>
+                        <div class="item-questions" id="UIScrollCT_BUSINESS_IDEA">
+                            <div class="inBox" id="UIScroll_BUSINESS_IDEA">
+                                <ul>
+                                    <li>현재 상용화하고자 하는 제품/서비스의 컨셉은 무엇인가?(한 문장으로 표현하기)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item-value">
+                            <textarea placeholder="" id="item_value_AX_BUSINESS_IDEA"></textarea>
+                        </div>
+                    </div>
+                    <div class="item seq03" id="item_BUSINESS_IDEA">
+                        <a href="#axexec" class="item-help" onclick=""><i class="fa fa-question-circle"></i></a>
+                        <a href="#axexec" class="item-quick" onclick=""><i class="fa fa-share-square-o"></i></a>
+                        <div class="item-code"><span class="none">BUSINESS_IDEA</span></div>
+                        <div class="item-name">비즈니스 아이디어</div>
+                        <div class="item-questions" id="UIScrollCT_BUSINESS_IDEA">
+                            <div class="inBox" id="UIScroll_BUSINESS_IDEA">
+                                <ul>
+                                    <li>현재 상용화하고자 하는 제품/서비스의 컨셉은 무엇인가?(한 문장으로 표현하기)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item-value">
+                            <textarea placeholder="" id="item_value_AX_BUSINESS_IDEA"></textarea>
+                        </div>
+                    </div>
+                    <div class="item seq04" id="item_BUSINESS_IDEA">
+                        <a href="#axexec" class="item-help" onclick=""><i class="fa fa-question-circle"></i></a>
+                        <a href="#axexec" class="item-quick" onclick=""><i class="fa fa-share-square-o"></i></a>
+                        <div class="item-code"><span class="none">BUSINESS_IDEA</span></div>
+                        <div class="item-name">비즈니스 아이디어</div>
+                        <div class="item-questions" id="UIScrollCT_BUSINESS_IDEA">
+                            <div class="inBox" id="UIScroll_BUSINESS_IDEA">
+                                <ul>
+                                    <li>현재 상용화하고자 하는 제품/서비스의 컨셉은 무엇인가?(한 문장으로 표현하기)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item-value">
+                            <textarea placeholder="" id="item_value_AX_BUSINESS_IDEA"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="stage-end"></div>
+
+            </div>
+
+            <div id="stage2" class="stages">
+
+                <div class="stage-title">STAGE2</div>
+
+                <div class="stage-body">
+
+                    <div class="item seq05" id="item_05">
+                        <a href="#axexec" class="item-help" onclick=""><i class="fa fa-question-circle"></i></a>
+                        <a href="#axexec" class="item-quick" onclick=""><i class="fa fa-share-square-o"></i></a>
+                        <div class="item-code"><span class="none">BUSINESS_IDEA</span></div>
+                        <div class="item-name">비즈니스 아이디어</div>
+                        <div class="item-questions" id="UIScrollCT_05">
+                            <div class="inBox" id="UIScroll_05">
+                                <ul>
+                                    <li>현재 상용화하고자 하는 제품/서비스의 컨셉은 무엇인가?(한 문장으로 표현하기)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item-value">
+                            <textarea placeholder="" id="item_value_AX_05"></textarea>
+                        </div>
+                    </div>
+                    <div class="item seq06" id="item_06">
+                        <a href="#axexec" class="item-help" onclick=""><i class="fa fa-question-circle"></i></a>
+                        <a href="#axexec" class="item-quick" onclick=""><i class="fa fa-share-square-o"></i></a>
+                        <div class="item-code"><span class="none">BUSINESS_IDEA</span></div>
+                        <div class="item-name">비즈니스 아이디어</div>
+                        <div class="item-questions" id="UIScrollCT_06">
+                            <div class="inBox" id="UIScroll_06">
+                                <ul>
+                                    <li>현재 상용화하고자 하는 제품/서비스의 컨셉은 무엇인가?(한 문장으로 표현하기)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item-value">
+                            <textarea placeholder="" id="item_value_AX_06"></textarea>
+                        </div>
+                    </div>
+                    <div class="item seq07" id="item_07">
+                        <a href="#axexec" class="item-help" onclick=""><i class="fa fa-question-circle"></i></a>
+                        <a href="#axexec" class="item-quick" onclick=""><i class="fa fa-share-square-o"></i></a>
+                        <div class="item-code"><span class="none">BUSINESS_IDEA</span></div>
+                        <div class="item-name">비즈니스 아이디어</div>
+                        <div class="item-questions" id="UIScrollCT_07">
+                            <div class="inBox" id="UIScroll_07">
+                                <ul>
+                                    <li>현재 상용화하고자 하는 제품/서비스의 컨셉은 무엇인가?(한 문장으로 표현하기)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item-value">
+                            <textarea placeholder="" id="item_value_AX_07"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="stage-end"></div>
+
+            </div>
+
+        </div>
+
+        <!-- quick editor -->
+        <div class="quick-container">
+            <div class="quick-title" id="quick-title">QUICK EDITOR</div>
+            <div class="quick-body" id="quick-body">
+
+                <div class="item seq01" id="qitem_1">
+                    <a href="#axexec" class="item-quick" onclick=""><span class="none">quick</span></a>
+                    <div class="item-name">비즈니스 아이디어</div>
+                    <div class="item-value">
+                        <textarea placeholder="" id="qitem_value_AX_1"></textarea>
+                    </div>
+                </div>
+
+                <div class="item seq02" id="qitem_2">
+                    <a href="#axexec" class="item-quick" onclick=""><span class="none">quick</span></a>
+                    <div class="item-name">비즈니스 아이디어</div>
+                    <div class="item-value">
+                        <textarea placeholder="" id="qitem_value_AX_2"></textarea>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 네비게이션 표시 -->
+        <div class="navigation stage1" id="stage-navigation">
+            <a onclick="" class="stageMenu stage1"><span class="none">1</span></a>
+            <a onclick="" class="stageMenu stage2"><span class="none">2</span></a>
+            <a onclick="" class="stageMenu stage3"><span class="none">3</span></a>
+            <a onclick="" class="stageMenu stage4"><span class="none">4</span></a>
+            <a onclick="" class="stageMenu stage5"><span class="none">5</span></a>
+            <a onclick="" class="stageMenu stage6"><span class="none">6</span></a>
+            <a onclick="" class="stageMenu stage7"><span class="none">7</span></a>
+            <a onclick="" class="stageMenu stage8"><span class="none">8</span></a>
+            <a onclick="" class="stageMenu stage9"><span class="none">9</span></a>
+
+        </div>
+    </div>
+    <!-- end ax-page-body -->
+
+
+    <!-- 팀/게임 정보 팝업 -->
+    <div class="AXPopOver" id="popmenu" style="display:none;">
+        <div class="arrowTop"></div>
+        <div class="blockContainer">
+            <div class="contextMenuBody popmenu">
+                <div class="popmenuTitle">
+                    팀
+                    <button type="button" class="popmenuButton AXButtonSmall" onclick="fnObj.frmOpenTeam();">Add</button>
+                </div>
+                <div class="popmenuBody" id="myteams">
+
+                </div>
+                <div class="popmenuTitle">
+                    게임
+                    <button type="button" class="popmenuButton AXButtonSmall" onclick="fnObj.frmOpenGame();">Add</button>
+                </div>
+                <div class="popmenuBody" id="mygames">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 로그인 정보 팝업 -->
+    <div class="AXPopOver" id="popusermenu" style="display:none;">
+        <div class="arrowTop"></div>
+        <div class="blockContainer">
+            <div class="contextMenuBody popusermenu">
+                <div id="userEmail">
+
+                </div>
+                <div class="AXHspace5"></div>
+                <button type="button" class="AXButtonSmall Classic" onclick="fnObj.logout();">로그아웃</button>
+                <button type="button" class="AXButtonSmall Classic" onclick="fnObj.frmOpenChangePassword();">비밀번호변경</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 팀정보 / 게임정보 팝업 -->
+    <div style="display:none;">
+
+        <div id="teamFrm">
+            <div class="signInTitle">팀이름을 입력해주세요</div>
+            <div class="signInBody">
+                <div style="padding-bottom:10px;" class="isFirstFrm">만들어진 팀이 없습니다. 게임을 시작하기 위해서는 팀 이름을 입력 하셔야 합니다.</div>
+                <form name="teamform" method="post" onsubmit="return false;">
+                    <input type="hidden" name="fb_access_token" value="" />
+                    <input type="hidden" name="team_id" value="" />
+                    <label class="AXInputLabel">
+                        <input type="text" name="team_name" placeholder="팀이름" class="AXInput W200" />
+                    </label>
+                    <div class="AXHspace10"></div>
+                    <label class="AXInputLabel fullWidth">
+                        <span>팀 멤버의 수</span>
+                        <select name="team_member_count" class="AXSelect W200">
+                            <option value="">선택해주세요</option>
+                            <option value="1">1명</option>
+                            <option value="2~5">2~5명</option>
+                            <option value="5~10">5~10명</option>
+                            <option value="10~">10명 이상</option>
+                        </select>
+                    </label>
+                    <div class="AXHspace10"></div>
+                    <label class="AXInputLabel fullWidth">
+                        <span>제품/서비스의 포지셔닝 영역</span>
+                        <select name="position" class="AXSelect W200">
+                            <option value="">선택해주세요</option>
+                            <option value="Social">Social(메신저/데이팅 서비스 등 포함)</option>
+                            <option value="Media-Contents">Media & Contents</option>
+                            <option value="Commerce-Payment">Commerce & Payment</option>
+                            <option value="IoT-SmartDevice">IoT & Smart Device</option>
+                            <option value="LBS">LBS(Human Location 포함)</option>
+                            <option value="BigData">Big Data</option>
+                            <option value="Cloud">Cloud</option>
+                            <option value="etc">Etc.</option>
+                        </select>
+                    </label>
+                    <div class="AXHspace10"></div>
+                    <button class="AXButton Green" onclick="fnObj.makeTeam();">OK</button>
+                    <button type="button" class="AXButton Red isSecondFrm" onclick="fnObj.cancelTeam();">CANCEL</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div id="gameFrm">
+            <div class="signInTitle">게임만들기</div>
+            <div class="signInBody">
+                <div style="padding-bottom:10px;font-weight:bold;" class="isFirstFrm">만들어진 게임이 없습니다.</div>
+
+                <div class="AXHspace10"></div>
+                <form name="gameform" method="post" onsubmit="return false;">
+                    <input type="hidden" name="fb_access_token" value="" />
+                    <input type="hidden" name="game_id" value="" />
+                    <label class="AXInputLabel fullWidth">
+                        <input type="text" name="game_name" placeholder="게임이름" class="AXInput W200" />
+                    </label>
+                    <div class="AXHspace10"></div>
+                    <label class="AXInputLabel fullWidth">
+                        <span>사업아이템의 성격을 고려하여<br/>게임타입을 선택해 주세요</span>
+                        <select name="game_type" class="AXSelect W200">
+                            <option value="PLATFORM">플랫폼(양면시장) 유형</option>
+                            <option value="PRODUCT">일반 제품-서비스 유형</option>
+                        </select>
+                    </label>
+                    <div class="AXHspace10"></div>
+                    <button class="AXButton Green" onclick="fnObj.makeGame();">OK</button>
+                    <button type="button" class="AXButton Red isSecondFrm" onclick="fnObj.cancelGame();">CANCEL</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="passFrm">
+            <div class="signInTitle">비밀번호 바꾸기</div>
+            <div class="signInBody">
+                <div style="padding-bottom:10px;font-weight:bold;" class="isFirstFrm">현재 비밀번호와 변경하실 비밀번호를 입력하세요</div>
+
+                <div class="AXHspace10"></div>
+                <form name="passform" method="post" onsubmit="return false;">
+                    <label class="AXInputLabel fullWidth">
+                        <input type="password" name="oldPassword" placeholder="현재 비밀번호" class="AXInput" />
+                    </label>
+                    <div class="AXHspace10"></div>
+                    <label class="AXInputLabel fullWidth">
+                        <input type="password" name="newPassword" placeholder="새로운 비밀번호" class="AXInput" />
+                    </label>
+                    <div class="AXHspace10"></div>
+                    <button class="AXButton Green" onclick="fnObj.changePassword();">OK</button>
+                    <button type="button" class="AXButton Red isSecondFrm" onclick="myModal.close('modal_password')">CANCEL</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
