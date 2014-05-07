@@ -54,7 +54,8 @@
 
 	var fnObj = {
 		pageStart: function(){
-			$("#ajaxMethod").bindSelect();
+
+            $("#ajaxMethod").bindSelect();
 			myProgress.setConfig({
 				theme:"AXCircleProgress",
 				totalCount:2, 
@@ -90,7 +91,7 @@
 
 			new AXReq( apiProtocol + apiServer + "/" + _url,
 			{
-				debug: false, 
+				debug: true,
 				pars: _param, 
 				type: _method,
 				contentType: "application/json",

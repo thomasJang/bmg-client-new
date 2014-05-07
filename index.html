@@ -109,6 +109,10 @@
                             <i class="fa fa-sign-in"></i>
                             로그인
                         </button>
+
+                        <!-- today -->
+                        <div class="AXHspace10"></div>
+                        <a href="#axexec" onclick="bmg.findPassword();">비밀번호를 잊으셨나요?</a>
                     </form>
                 </div>
             </div>
@@ -351,7 +355,8 @@
                         debug:false,
                         headers: apiheaders,
                         type: "GET",
-                        pars: "email="+ frm.email.value.trim() +"&password=" + getSHA512(frm.passwd.value.trim()),
+                        pars: "email="+ frm.email.value.trim() +"&password="
+                                + getSHA512(frm.passwd.value.trim()),
                         contentType: "application/json", async:false,
                         onsucc: function (res) {
                             if(res.error){
@@ -376,7 +381,7 @@
             return false;
         },
         findPassword: function(){
-            var frm = document.signupform;
+            var frm = document.signInForm;
 
             if(frm.email.value.length < 6){
                 alert("이메일 주소를 입력해주세요.");
@@ -394,11 +399,11 @@
                         contentType: "application/json", async:false,
                         onsucc: function (res) {
                             alert("이메일로 새로운 비밀번호를 전송하였습니다. 감사합니다.");
-                            myModal.close('modalDiv01');
+                            window.location.reload();
                         },
                         onerr: function(e){
                             alert("이메일로 새로운 비밀번호를 전송하였습니다. 감사합니다.");
-                            myModal.close('modalDiv01');
+                            window.location.reload();
                         }
                     });
         }

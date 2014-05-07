@@ -230,14 +230,14 @@
             <div class="contextMenuBody popmenu">
                 <div class="popmenuTitle">
                     팀
-                    <button type="button" class="popmenuButton AXButtonSmall" onclick="fnObj.frmOpenTeam();">Add</button>
+                    <button type="button" class="popmenuButton AXButtonSmall" onclick="fnObj.team.frmOpenTeam();">Add</button>
                 </div>
                 <div class="popmenuBody" id="myteams">
 
                 </div>
                 <div class="popmenuTitle">
                     게임
-                    <button type="button" class="popmenuButton AXButtonSmall" onclick="fnObj.frmOpenGame();">Add</button>
+                    <button type="button" class="popmenuButton AXButtonSmall" onclick="fnObj.game.frmOpenGame();">Add</button>
                 </div>
                 <div class="popmenuBody" id="mygames">
 
@@ -251,7 +251,7 @@
         <div class="arrowTop"></div>
         <div class="blockContainer">
             <div class="contextMenuBody popusermenu">
-                <div id="userEmail">
+                <div id="user-email">
 
                 </div>
                 <div class="AXHspace5"></div>
@@ -302,7 +302,7 @@
                     </label>
                     <div class="AXHspace10"></div>
                     <button class="AXButton Green" onclick="fnObj.makeTeam();">OK</button>
-                    <button type="button" class="AXButton Red isSecondFrm" onclick="fnObj.cancelTeam();">CANCEL</button>
+                    <button type="button" class="AXButton Red isSecondFrm" onclick="fnObj.team.cancelTeam();">CANCEL</button>
                 </form>
             </div>
         </div>
@@ -329,8 +329,8 @@
                         </select>
                     </label>
                     <div class="AXHspace10"></div>
-                    <button class="AXButton Green" onclick="fnObj.makeGame();">OK</button>
-                    <button type="button" class="AXButton Red isSecondFrm" onclick="fnObj.cancelGame();">CANCEL</button>
+                    <button class="AXButton Green" onclick="fnObj.game.makeGame();">OK</button>
+                    <button type="button" class="AXButton Red isSecondFrm" onclick="fnObj.game.cancelGame();">CANCEL</button>
                 </form>
             </div>
         </div>

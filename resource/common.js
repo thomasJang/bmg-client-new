@@ -60,22 +60,23 @@ var fcObj = {
 		fcObj.popusermenu = $("#popusermenu");
 		
 		if(AXUtil.browser.mobile){
-			$("#popMenuHandle").bind("click", function(){
+			$("#pop-menu-handle").bind("click", function(){
 				fcObj.popmenu.toggle();
 				fcObj.popusermenu.hide();
 			});
-			$("#user_icon, #user_name").bind("click", function(){
+			$("#user-icon, #user-name").bind("click", function(){
 				fcObj.popusermenu.toggle();
 				fcObj.popmenu.hide();
 			});
 			
 		}else{
-			$("#popMenuHandle").bind("mouseover", function(){
+
+			$("#pop-menu-handle").bind("mouseover", function(){
 				if(fcObj.popmenuObs) clearTimeout(fcObj.popmenuObs);
 				fcObj.popmenu.show();
 				fcObj.popusermenu.hide();
 			});
-			$("#popMenuHandle").bind("mouseout", function(){
+			$("#pop-menu-handle").bind("mouseout", function(){
 				if(fcObj.popmenuObs) clearTimeout(fcObj.popmenuObs);
 				fcObj.popmenuObs = setTimeout(fcObj.popmenuClose, 1000);
 			});
@@ -90,12 +91,12 @@ var fcObj = {
 			});
 			
 			//------------
-			$("#user_icon, #user_name").bind("mouseover", function(){
+			$("#user-icon, #user-name").bind("mouseover", function(){
 				if(fcObj.popmenuObs) clearTimeout(fcObj.popmenuObs);
 				fcObj.popusermenu.show();
 				fcObj.popmenu.hide();
 			});
-			$("#user_icon, #user_name").bind("mouseout", function(){
+			$("#user-icon, #user-name").bind("mouseout", function(){
 				if(fcObj.popmenuObs) clearTimeout(fcObj.popmenuObs);
 				fcObj.popmenuObs = setTimeout(fcObj.popmenuClose, 1000);
 			});
