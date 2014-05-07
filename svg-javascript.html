@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="axisj/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="axisj/lib/AXJ.js"></script>
+</head>
+<body>
+    <div>
+        <svg id="target_AX_SVG" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+            <g id="target_AX_SVG_AX_editSpace"></g>
+        </svg>
+    </div>
+</body>
+</html>
+
+<script> // rect
+var addRect = function(appendSVG){
+    var rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    rect.setAttributeNS(null, "id", "rect-01");
+    rect.setAttributeNS(null, "x", "10");
+    rect.setAttributeNS(null, "y", "10");
+    rect.setAttributeNS(null, "width", "100");
+    rect.setAttributeNS(null, "height", "100");
+    rect.setAttributeNS(null, "rx", "10");
+    rect.setAttributeNS(null, "ry", "10");
+    rect.setAttributeNS(null, "fill", "#ffffff");
+    rect.setAttributeNS(null, "stroke", "#000000");
+    rect.setAttributeNS(null, "stroke-width", "2");
+    rect.setAttributeNS(null, "stroke-dasharray", "2,2");
+    appendSVG.appendChild(rect);
+};
+</script>
+<script> // rect
+var addCircle = function(appendSVG){
+    var cicle = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse');
+    cicle.setAttributeNS(null, "id", "circle-01");
+    cicle.setAttributeNS(null, "cx", "60");
+    cicle.setAttributeNS(null, "cy", "60");
+    cicle.setAttributeNS(null, "rx", "50");
+    cicle.setAttributeNS(null, "ry", "50");
+    cicle.setAttributeNS(null, "fill", "#ffffff");
+    cicle.setAttributeNS(null, "stroke", "#000000");
+    cicle.setAttributeNS(null, "stroke-width", "2");
+    cicle.setAttributeNS(null, "stroke-dasharray", "2,2");
+    appendSVG.appendChild(cicle);
+};
+</script>
+<script> // rect
+var addPath = function(appendSVG){
+
+    addDefs(
+        appendSVG,
+        [
+            {point:20, color:"#029a29"},
+            {point:40, color:"#ffd70c"},
+            {point:60, color:"#e06562"},
+        ]
+    );
+
+    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttributeNS(null, "id", "path-01");
+    path.setAttributeNS(null, "fill", "url(#fillGrad)");
+    path.setAttributeNS(null, "stroke", "#000000");
+    path.setAttributeNS(null, "stroke-linejoin", "round");
+    path.setAttributeNS(null, "stroke-width", "1");
+
+    var myPath = [];
+
+
+    // [10,10] [200,10], [200,30], [10,30], [10,10]
+    myPath.push(10+" "+10);
+    myPath.push(200+" "+10);
+    myPath.push(200+" "+30);
+    myPath.push(10+" "+30);
+
+    /*
+    var x = 10, y = 10, w = 200, h = 20;
+    var ax = x, ay = y, bx = ax + w, by = ay + h;
+
+    var nx = ax,  ny = ay, wave = 5;
+
+    var loopI = 0;
+    do{
+        if(loopI % 2 == 0) myPath.push(nx + " " + ay);
+        if(loopI % 2 == 1) myPath.push(nx + " " + (ay-wave));
+        nx += wave;
+        loopI++;
+    }while(nx < bx);
+
+    myPath.push(bx+" "+ay);
+    myPath.push(bx+" "+by);
+
+
+    do{
+        if(loopI % 2 == 0) myPath.push(nx + " " + (by));
+        if(loopI % 2 == 1) myPath.push(nx + " " + (by-wave));
+        nx -= wave;
+        loopI--;
+    }while(nx > ax);
+
+    myPath.push(ax+" "+by);
+    */
+
+    path.setAttributeNS(null, "d", "M " + myPath.join(" L ") + " Z");
+    appendSVG.appendChild(path);
+
+};
+var addDefs = function(appendSVG, points){
+
+        var defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+        var linearGradient = document.createElementNS('http://www.w3.org/2000/svg', 'linearGradient');
+        linearGradient.setAttributeNS(null, "id", "fillGrad");
+
+        function appendStop(point, color){
+            var stop = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+            stop.setAttributeNS(null, "offset", point + "%");
+            stop.setAttributeNS(null, "stop-color", color);
+            linearGradient.appendChild(stop);
+        }
+
+        $.each(points, function(){
+            appendStop(this.point, this.color);
+        });
+
+        defs.appendChild(linearGradient);
+
+        appendSVG.appendChild(defs);
+    }
+</script>
+
+
+<script>
+var svgTarget = $("#target_AX_SVG_AX_editSpace");
+
+var appendSVG = document.createElementNS(
+                    'http://www.w3.org/2000/svg',
+                    'g'
+                );
+
+addRect(appendSVG);
+
+svgTarget.append(appendSVG);
+
+</script>
